@@ -27,7 +27,7 @@ By the end of this workshop, you will have written and optimized several fundame
 
 ### Prerequisites
 
--   **Python 3.10+**
+-   **Python 3.12+**
 -   An **NVIDIA GPU** with CUDA installed (recommended for performance).
 -   [presenterm](https://github.com/mfontanini/presenterm) for slides and a terminal with [image/sixel](https://saitoha.github.io/libsixel/) support (e.g. Windows Terminal, Kitty, iTerm2)
 -   CPU-only is possible for debugging using Triton's interpreter mode.
@@ -67,15 +67,14 @@ Run each exercise script using `uv run`.
 
 ```bash
 # Start with the first exercise
-uv run exercises/exercise_1.py
+uv run exercise_1
 
 # When you're ready, move to the next one
-uv run exercises/exercise_2.py
-uv run exercises/exercise_3.py
-uv run exercises/exercise_4.py
+uv run exercise_2
+...
 
 # You can run the solution files to compare
-uv run solutions/exercise_1.py
+uv run solution_1
 ```
 
 ## 🧪 Example Usage
