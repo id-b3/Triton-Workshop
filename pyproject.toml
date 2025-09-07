@@ -1,0 +1,53 @@
+[project]
+name = "triton_workshop"
+version = "1.0.0"
+description = "Triton Workshop: Building Kernels from Scratch"
+authors = [
+    {name = "Ivan Dudurych", email = "ivan.dudurych@lumavision.com"}
+]
+requires-python = ">=3.12"
+dependencies = [
+    "torch>=2.0.0",
+    "triton>=2.3.0",
+    "matplotlib>=3.7.0",
+    "rich>=14.1.0",
+    "torchvision>=0.18.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+    "coverage",
+]
+
+[tool.uv]
+package = true
+
+[project.scripts]
+# --- Setup ---
+setup-check = "triton_workshop.utils_main:setup_check"
+
+# --- Exercises ---
+exercise1 = "triton_workshop.runners:run_exercise1"
+exercise2 = "triton_workshop.runners:run_exercise2"
+exercise3 = "triton_workshop.runners:run_exercise3"
+exercise4 = "triton_workshop.runners:run_exercise4"
+
+# --- Solutions ---
+solution1 = "triton_workshop.runners:run_solution1"
+solution2 = "triton_workshop.runners:run_solution2"
+solution3 = "triton_workshop.runners:run_solution3"
+solution4 = "triton_workshop.runners:run_solution4"
+
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+skip-magic-trailing-comma = false
+docstring-code-format = true
