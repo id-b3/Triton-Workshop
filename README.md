@@ -1,10 +1,10 @@
 # A Hands-On Introduction to Triton
 
-## 🚀 From Python to GPU Kernels in 3 Hours
+## From Python to GPU Kernels in 3 Hours
 
 This repository contains the code, exercises, and presentation for a hands-on workshop designed to teach you how to write custom, high-performance GPU kernels from scratch using OpenAI's Triton language.
 
-### 🎯 What You'll Build
+### What You'll Build
 
 By the end of this workshop, you will have written and optimized several fundamental GPU kernels:
 
@@ -13,7 +13,7 @@ By the end of this workshop, you will have written and optimized several fundame
 -   **2D Convolution:** Implement the core operation of CNNs with a 3D kernel grid and nested loops.
 -   **Tiled Matrix Multiplication:** Build the workhorse of modern AI and learn performance-oriented tiling patterns.
 
-## 🏗️ Workshop Structure
+## Workshop Structure
 
 | Session                                                  | Duration  | Key Concepts Covered                                        |
 | :------------------------------------------------------- | :-------- | :---------------------------------------------------------- |
@@ -23,7 +23,7 @@ By the end of this workshop, you will have written and optimized several fundame
 | **4. Building Blocks of AI: Convolution & MatMul**       | (60 min)  | 3D Grids, Tiled Algorithms, Accumulators, `tl.dot`          |
 | **5. Making it Fast: Performance & Next Steps**          | (15 min)  | Debugging with `TRITON_INTERPRETER`, `autotune`, Real-world usage |
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -59,7 +59,7 @@ A successful setup will produce the following output:
 🚀 You are ready for the Triton workshop!
 ```
 
-## 💻 Running the Exercises
+## Running the Exercises
 
 This is a hands-on workshop. You will find templates in the `exercises/` directory and complete solutions in the `solutions/` directory.
 
@@ -77,7 +77,7 @@ uv run exercise_2
 uv run solution_1
 ```
 
-## 🧪 Example Usage
+## Example Usage
 
 Once you've completed Exercise 4, you'll have a fully functional, GPU matrix multiplication kernel. You can use it like any Python function:
 
@@ -100,7 +100,7 @@ print(f"Max difference: {(output_triton - output_pytorch).abs().max():.2e}")
 print("✅ Your kernel produces the correct result!")
 ```
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -127,7 +127,7 @@ python -c "import torch; print(torch.__version__)"
 python -c "import triton; print(triton.__version__)"
 ```
 
-## 📚 Learning Resources
+## Learning Resources
 
 ### Core Concepts Covered
 
@@ -145,15 +145,16 @@ python -c "import triton; print(triton.__version__)"
 -   **Unsloth Kernels:** Explore production-grade Triton kernels used for optimizing LLMs.
 -   **Official Triton Tutorials:** Dive deeper into advanced topics like reductions and scans on the official website.
 
-## 🤝 Community & Support
+## Community & Support
 
 -   **Issues:** Found a bug or have a suggestion? Please open a GitHub issue.
 -   **Discussions:** Have a question about a concept? Start a discussion on GitHub.
 
 ---
 
-## 🎉 Ready to Start?
-
-```bash
-uv run setup-check
-```
+## References
+[Triton](https://triton-lang.org/main/index.html)  
+[OpenAI Blog](https://openai.com/index/triton/)  
+[UnSloth](https://github.com/unslothai/unsloth/tree/main/unsloth/kernels)  
+**Huge** thanks to [Umer Adil](https://www.umerha.com/) for his [excellent lecture](https://github.com/gpu-mode/lectures/tree/main/lecture_014)  
+[Triton Puzzles](https://github.com/srush/Triton-Puzzles)  
